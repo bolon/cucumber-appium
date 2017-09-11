@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/appium.iml" filepath="$PROJECT_DIR$/.idea/modules/appium.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/appium_main.iml" filepath="$PROJECT_DIR$/.idea/modules/appium_main.iml" group="appium" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/appium_test.iml" filepath="$PROJECT_DIR$/.idea/modules/appium_test.iml" group="appium" />
+    </modules>
+  </component>
+</project>
