@@ -4,6 +4,7 @@ import commons.AppiumSetup;
 import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -67,4 +68,41 @@ public class BaseAppPage extends AppiumSetup {
         Assert.assertTrue(btnRegister.isEnabled());
     }
 
+    @When("^I click \"([^\"]*)\" button$")
+    public void i_click_button(String btnName) throws Throwable {
+        clickElement(btnName);
+    }
+
+    @When("^I click \"([^\"]*)\" menu$")
+    public void i_click_menu(String menuName) throws Throwable {
+        clickElement(menuName);
+    }
+
+
+    void clickElement(String elementName) {
+        String elementId = pkgName;
+
+        switch (elementName) {
+            case "Sign In": {
+                elementId = elementId.concat("signInButton");
+                break;
+            }
+            case "CRUD": {
+                elementId = elementId.concat("crud_btn");
+                break;
+            }
+            case "Create Item": {
+                elementId = elementId.concat("menu_create_item");
+                break;
+            }
+            case "Continue": {
+                elementId = elementId.concat("outlet_continue");
+            }
+        }
+
+        if (!elementId.equals(pkgName))
+            appiumDriver.findElementById(elementId).click();
+        else
+            throw new NullPointerException("No Element ID supplied");
+    }
 }

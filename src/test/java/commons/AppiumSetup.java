@@ -29,7 +29,7 @@ public class AppiumSetup {
 
         capabilities = new DesiredCapabilities();
         capabilities.setCapability("app", apk.getAbsolutePath());
-        capabilities.setCapability("noReset", true);
+        //capabilities.setCapability("noReset", true);
 
         switch (driverPREF) {
             case IOS: {
