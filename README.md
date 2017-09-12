@@ -28,5 +28,10 @@ valid_pwd = [valid_pwd_here]
 1. Go to root project
 2. Run this command ``gradle cucumber``
 
+## Run specific scenario
+In general we use ``cucumber feature_file_name:[line_number]``, in this project slightly different.
+
+Use this instead ``gradle cucumber -PfeatureFile="feature_file_name:line_number"``
+
 # Note
 See this [link](https://github.com/cucumber/cucumber-jvm/tree/master/examples/java-gradle) for more info about working with cucumber & gradle
